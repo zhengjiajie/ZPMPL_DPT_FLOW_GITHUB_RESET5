@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:flow="ppmflow.control">
+	<Popover showHeader="false" placement="Right" offsetX="{/positionX}" offsetY="{/positionY}" afterClose="contextMenuClosed"
+		afterOpen="contextMenuOpened" class="ppmFlowNoScroll">
+		<List items="{/commands}">
+			<flow:ContextMenuItem name="{name}" text="{description}" type="{path:'deactivate', formatter: '.deactivateToListType'}"
+				class="ppmFlowCommand" press="contextMenuItemSelected"/>
+		</List>
+	</Popover>
+</core:FragmentDefinition>

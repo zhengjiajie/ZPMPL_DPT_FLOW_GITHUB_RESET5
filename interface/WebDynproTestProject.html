@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html style="width: 100%; height: 100%;">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>flow</title>
+
+		<script id="sap_ui_bootstrap"
+			src="https://sapui5.hana.ondemand.com/1.44.10/resources/sap-ui-cachebuster/sap-ui-core.js"
+			data-sap-ui-id="flow_bootstrap"
+			data-sap-ui-libs="sap.m,sap.ui.vbm,sap.ui.vk,sap.ui.layout"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-compatVersion="edge"
+                data-sap-ui-xx-bindingSyntax="complex"
+			data-sap-ui-resourceroots='{"ppmflow": "../webapp/",
+				"d3plus": "../webapp/thirdparty/d3plus/version1.9.8/d3plus-master/d3plus-master/d3plus.min",
+				"dagreD3": "../webapp/thirdparty/dagreD3/version0.4.17/dagre-d3-master/dagre-d3-master/dist/dagre-d3.min"
+			}'>
+		</script>
+		
+		<script id="ppmFlowInterface" src="WebDynpro.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="../webapp/css/style.css">
+
+	</head> 
+
+	<body class="sapUiBody" width="100%" height="100%">
+		<div class="sapUiBody" id="ppmflowContent" style="height: 100%;">
+			<script>
+				ppmFlow.initializeProject("ppmflowContent")
+			
+				$.getJSON("../webapp/model/mainTest.json", function( data ) {
+					var array = [];
+					array.push(data);
+					ppmFlow.buildflow(array);
+				});
+				
+			</script>
+		</div>
+	</body>
+
+</html>

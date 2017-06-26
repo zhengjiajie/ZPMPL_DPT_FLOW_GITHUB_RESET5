@@ -1,0 +1,11 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Popover showHeader="false" placement="Bottom" offsetX="{/positionX}" offsetY="{/positionY}">
+		<VBox justifyContent="Center" alignItems="Center">
+			<Image src="{/legendPath}" densityAware="false" width="{/imageWidth}" decorative="false">
+				<layoutData>
+					<FlexItemData growFactor="1"/>
+				</layoutData>
+			</Image>
+		</VBox>
+	</Popover>
+</core:FragmentDefinition>
